@@ -163,6 +163,34 @@
       "examples": ["2002-10-02T11:00:00-05:00", "2002-10-02T16:00:00Z", "2002-10-02T16:00:00.05Z"],
       "format": "date-time"
     },
+    "pauses": {
+      "type": "array",
+      "title": "Pauses",
+      "description": "Pauses that took place during the run.",
+      "items": {
+        "type": "object",
+        "title": "Pause",
+        "description": "A single pause that took place during the run.",
+        "required": [],
+        "additionalProperties": false,
+        "properties": {
+          "startedAt": {
+            "type": "string",
+            "title": "Started At",
+            "description": "The date and time at which the pause was started, specified in RFC 3339 format.",
+            "examples": ["2002-10-02T10:00:00-05:00", "2002-10-02T15:00:00Z", "2002-10-02T15:00:00.05Z"],
+            "format": "date-time"
+          },
+          "endedAt": {
+            "type": "string",
+            "title": "Ended At",
+            "description": "The date and time at which the pause was ended, specified in RFC 3339 format.",
+            "examples": ["2002-10-02T11:00:00-05:00", "2002-10-02T16:00:00Z", "2002-10-02T16:00:00.05Z"],
+            "format": "date-time"
+          }
+        }
+      }
+    },
     "game": {
       "type": "object",
       "title": "Game",
